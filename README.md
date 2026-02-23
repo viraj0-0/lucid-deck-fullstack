@@ -50,3 +50,64 @@ lucid-deck-fullstack/
 │   ├── package.json
 │   └── vite.config.js
 └── README.md
+
+🚀 Local Setup & Installation
+Prerequisites
+Node.js installed on your machine.
+
+A Gemini API Key from Google AI Studio.
+
+1. Clone the Repository
+Bash
+git clone [https://github.com/viraj0-0/lucid-deck-fullstack.git](https://github.com/viraj0-0/lucid-deck-fullstack.git)
+cd lucid-deck-fullstack
+2. Setup the Backend
+Navigate to the backend folder, install dependencies, and set up your environment variables.
+
+Bash
+cd backend
+npm install
+Create a .env file inside the backend folder and add:
+
+Code snippet
+GEMINI_API_KEY=your_gemini_api_key_here
+ALLOWED_ORIGIN=http://localhost:5173
+PORT=3000
+Start the server:
+
+Bash
+node index.js
+3. Setup the Frontend
+Open a new terminal, navigate to the frontend folder, and install dependencies.
+
+Bash
+cd client1/pixi
+npm install
+Create a .env file inside the client1/pixi folder and add:
+
+Code snippet
+VITE_API_URL=http://localhost:3000
+Start the frontend development server:
+
+Bash
+npm run dev
+🌍 Deployment
+This project is configured for easy deployment on Vercel (Frontend) and Render (Backend).
+
+Deploying the Backend (Render)
+Create a new Web Service on Render connected to this GitHub repository.
+
+Set the Root Directory to backend.
+
+Set the Build Command to npm install and Start Command to node index.js.
+
+Add the GEMINI_API_KEY and ALLOWED_ORIGIN environment variables.
+
+Deploying the Frontend (Vercel)
+Import this GitHub repository into Vercel.
+
+Set the Root Directory to client1/pixi.
+
+Add the VITE_API_URL environment variable pointing to your live Render backend URL.
+
+Deploy. The included vercel.json file will automatically handle React Router's SPA redirects.
