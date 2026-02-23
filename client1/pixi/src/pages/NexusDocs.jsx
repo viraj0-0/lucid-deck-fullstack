@@ -403,7 +403,7 @@ import {
   Terminal, ShieldCheck, Cpu, Download, Search,
   Menu, X, Github, ExternalLink, Zap
 } from 'lucide-react';
-import Grainient from './components/Grainient'; // Ensure this path matches your folder structure
+import Grainient from '../components/Grainient'; // Ensure this path matches your folder structure
 
 // --- STYLES ---
 const FontStyles = () => (
